@@ -1,4 +1,3 @@
-https://leetcode.com/problems/same-tree/description/
 
 //tc-..if same trres- o(m) or o(n)..if not..- min(o(m,n))..
 //sc..similalrly sc..
@@ -16,13 +15,13 @@ public:
             return false;
         }
 
-        if(p->val==q->val){
-            return isSameTree(p->left,q->left) && isSameTree(p->right,q->right);
+        if(p->val !=q->val){
+            return false;
         }
 
-        
-        return false;
-
+    
+      return isSameTree(p->left,q->left) && isSameTree(p->right,q->right);
+    
 
     }
 };
