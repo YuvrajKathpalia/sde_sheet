@@ -6,12 +6,16 @@
 //right max nikal lia...
 
 //fir min(leftmax,rightmax)-arr[i]..for all index...
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
 int trap(vector<int>& arr) {
+
     int n = arr.size();
     int waterTrapped = 0;
+
     for (int i = 0; i < n; i++) {
         int j = i;
         int leftMax = 0, rightMax = 0;
@@ -51,6 +55,10 @@ int main() {
 
 //BETTER APPROACH...
 //PREFIX ,SUFFIX ARRAY...
+
+//cumulative max element store krte rhenge..while loop lgake 
+//har element ke lie leftmax , rightmax nikalne se acha , 
+//phle se hi nikal ke rkhlie prefix,suffix array me..
 
 //O(3N)..
 //O(2N)
