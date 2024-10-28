@@ -9,7 +9,7 @@ https://leetcode.com/problems/balanced-binary-tree/description/
 // The intuition behind this solution is to recursively calculate the height of the left and right subtrees while checking if their height difference exceeds 1 at any node. If it does, mark the tree as unbalanced and return the result.
 
  //o(n)..
- //o(n)...
+ //o(n)....
 
 
 class Solution {

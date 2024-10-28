@@ -1,6 +1,6 @@
 
- //o(n)..
- //o(n)..
+ //o(n)...
+ //o(n)...
 
  
 class Solution {

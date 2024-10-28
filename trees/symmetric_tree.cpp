@@ -1,3 +1,5 @@
+
+
 //acha..silly..
 //o(n)..
 //o(h)..
@@ -17,15 +19,16 @@ bool solve(TreeNode* p , TreeNode* q){
         return false;
     }
 
-    if(p->val!=q->val){
-        return false;
+    if(p->val==q->val){
+    return solve(p->left,q->right) && solve(p->right,q->left);
     }
 
-    return solve(p->left,q->right) && solve(p->right,q->left);
+    return false;
 }
     bool isSymmetric(TreeNode* root) {
 
         if(root==NULL){
+            
             return true;
         }
 

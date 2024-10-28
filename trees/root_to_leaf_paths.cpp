@@ -7,8 +7,7 @@ https://www.geeksforgeeks.org/problems/root-to-leaf-paths/1?utm_source=youtube&u
 //push back kro node 1d vector me ...ab fir condition lagao agar wo leaf node hai to 
 //mtlb valid path bngya hai, result me jo bhi pada hai 2d vector me daaldo..
 //AGAR LEAF NODE NI HAI TO LEFT,RIGHT KI CALL DEDO...AUR BAAD ME POP BACK BHI KRDENA RESULT
-//ME SE BACKTRACK KRDENA MATLB...
-
+//ME SE BACKTRACK KRDENA MATLB....
 
 //o(n)..
 //o(n)..

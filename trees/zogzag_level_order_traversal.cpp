@@ -18,6 +18,7 @@ public:
         if(root==NULL){
             return ans;
         }
+        
 
         bool leftToright=true;
 

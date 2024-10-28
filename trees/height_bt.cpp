@@ -1,7 +1,7 @@
 //max depth...
 
 
-//tc..o(n)..
+//tc..o(n)...
 //sc..o(h)..(worst case..o(n)...best casr..o(logn)..
 https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
 

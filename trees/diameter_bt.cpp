@@ -17,7 +17,7 @@
 // This approach efficiently calculates the diameter in a single traversal (O(N)) of the tree.
 
 //o(n)..
-//o(n)..
+//o(n)...
 
 class Solution {
 public:

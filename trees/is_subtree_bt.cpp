@@ -5,7 +5,7 @@ https://leetcode.com/problems/subtree-of-another-tree/description/
 
 
  //SAME TREE WALA LOGIC HI LGANA ..sametree wala function ki call di roots pe , 
- //agar false aya to , samefun call fir root->left,subroot , oot-<right,subroot pe di... or lgake
+ //agar false aya to , samefun call fir root->left,subroot , root-<right,subroot pe di... or lgake
  //khi se true ajaye to return hojayga..
 
 

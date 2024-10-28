@@ -13,7 +13,7 @@ https://leetcode.com/problems/binary-tree-maximum-path-sum/
 //tab dono thodi consider krskte hai)...obvio dry run krke dekhlo example 2..(9 se 15 hi to jaskta na possible path)(silly)
 
 //o(n)..
-//o(n)..
+//o(n)...
 
 
 class Solution {
@@ -25,7 +25,7 @@ int solve(TreeNode* root , int& maxi){
         return 0;
     }
 
-    int leftsum = max(0 ,solve(root->left,maxi));
+    int leftsum = max(0 ,solve(root->left,maxi));   //agar neagtive sum ara..to consider ni krenge...
     int rightsum =max(0,solve(root->right,maxi));
 
     maxi = max(maxi , root->val+leftsum+rightsum);

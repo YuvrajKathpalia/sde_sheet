@@ -52,7 +52,7 @@ vector<int> leftView(Node *root)
    
    for(auto x : result){
        
-       ans.push_back(x.front());
+       ans.push_back(x.front());  //agar right view hota..to x.back() krte...
    }
    
    return ans;
@@ -85,7 +85,9 @@ ans.push_back(root->data);
 
 
 solve(root->left, ans, level+1);
-solve(root->right, ans, level+1);
+solve(root->right, ans, level+1);      //call to deni hi pdegi right ki bhi..kya pta LEFT wale null ho sare...
+                                       //aur ekbaar jab ans ka size jitne total level hai utna hogya..mtlb sab left
+                                       //wale cover krlie... right wala satisfy hi nui hogi conditon..
 }
 
 
