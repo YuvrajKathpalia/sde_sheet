@@ -7,7 +7,7 @@ https://www.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/1
 //3)traverse right boundary..... ab left boundary aur sari leaf nodes hogyi abb right boudary chiyee
 // but ulti chiyee na to usme phle calls krenge fir push back last me taki wo last se phochke hi shuru kre...
 
-//mtlb leftnoundary me preorder traversal ,rightboundary me postorder traversal
+//mtlb left boundary me preorder traversal ,rightboundary me postorder traversal
 //aur leaves print krvana hume aata hi hai..ek condition check aur 2 rec calls
 
 
@@ -43,7 +43,7 @@ void rightboundary(Node* root, vector<int>&ans){
     }
     
     
-    if(root->right){
+    if(root->right){   //phle right ki call(agar h) warna left ki call...jab leaf node pe phoch jaye..base case return .. fir upar aye tab wo print...
         rightboundary(root->right,ans);
     }
     
@@ -55,7 +55,7 @@ void rightboundary(Node* root, vector<int>&ans){
 }
 
 
-void leaves(Node* root, vector<int>&ans){
+void leaves(Node* root, vector<int>&ans){  //famous quesn in itself..print leaf nodes...
     
     if(root==NULL){
         return;
