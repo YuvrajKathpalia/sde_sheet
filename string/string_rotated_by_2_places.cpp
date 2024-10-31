@@ -1,5 +1,5 @@
 https://www.geeksforgeeks.org/problems/check-if-string-is-rotated-by-two-places-1587115620/1
-//acha..silly..concept clearing substr..
+//acha..silly..concept clearing substr.. 
 
 //s1 ko left shift,right shift dono krke dekhenge..khi se bhi aya true...
 //drr run easy..

@@ -1,3 +1,8 @@
+
+
+//o(max(m,n)+1)===o(m or n)
+//o(max(m,n))==o(m or n)
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -8,6 +13,7 @@ struct ListNode {
 };
 
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+
     ListNode* dummy = new ListNode(-1);
     ListNode* temp = dummy;
     int carry = 0;
