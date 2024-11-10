@@ -1,3 +1,6 @@
+
+//agar sorted array hai to ,2 pointer lagjega na arram se...binary search se bhi hojega...
+
 //brute...
 //o(n^2)..
 //o(1)..

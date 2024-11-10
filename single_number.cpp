@@ -1,5 +1,7 @@
 https://www.geeksforgeeks.org/problems/single-number1014/1
 
+
+//koi ek number ki frequency odd hai wo return krna...
 //brute force ..unirdered map..o(N)..o(n)..
 
 class Solution {

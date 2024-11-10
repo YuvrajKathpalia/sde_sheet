@@ -1,8 +1,8 @@
 //dono ll se phle number extract krlie...
 //fir muktiple krdia...easy
 
-//n+m
-//one
+//o(n+m)
+//o(1)
 
 class solution {
   public:

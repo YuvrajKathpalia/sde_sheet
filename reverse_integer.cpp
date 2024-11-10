@@ -1,7 +1,7 @@
 https://leetcode.com/problems/reverse-integer/description/
 
 //o(log10(x))  ...jitni digits utni baar loop chlega...
-//o(1)..
+//o(1)...
 
 
 class Solution {

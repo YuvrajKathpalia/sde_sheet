@@ -45,18 +45,18 @@ public:
            
            for(int i=0;i<ans.size();i++){
 
-            if(ans[i]==ch){
+            if(ans[i]==ch){  //1 hai jaise sirf...count bdao=1..bahr..../ya 11 hai , count bdao dono ka.count 2 ...bahr
                 count++;
             }
             else{
-                temp += to_string(count) + ch;
+                temp += to_string(count) + ch;  //jaise 11 ke bad 21 aya..2 ka count bdgya..but ab 1 aya !=ch..to phle 2 ko 12 krna pdega na..aur ch ko 1 se update krna pdega next iteration(if any)ke lie
                 ch=ans[i];
-                count=1;
+                count=1;  
             }
            }
 
-           temp += to_string(count) + ch;
-           ans=temp;
+           temp += to_string(count) + ch;  //jaise 1 ka 11 ..
+           ans=temp;                     //ab jaise 11 pe chlega yhi same loop
          }
 
          return ans;
