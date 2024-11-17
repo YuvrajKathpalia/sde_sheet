@@ -6,44 +6,45 @@ Alice defines equal string as a string which contains equal no of 1 and 0....
 print total no of equal string string that can be formed using given binary string
 
 #include <iostream>
+#include <string>
 #include <unordered_map>
 using namespace std;
 
-int countEqualSubsequences(const string &str) {
-    unordered_map<int, int> balanceCount;
-    int balance = 0;  // Start with balance 0
-    int result = 0;
-    
-    // Initialize balanceCount[0] = 1 to handle the case where we find a valid subsequence starting from index 0
-    balanceCount[0] = 1;
+long long countEqualZeroOneSubsequences(const string& s) {
+    unordered_map<int, int> prefixSumFreq;
+    int prefixSum = 0;
+    long long count = 0;
 
-    // Traverse through the string
-    for (char ch : str) {
-        // Update the balance based on the character
+    // Initial frequency for prefix sum 0 (to handle equal subsequences from start)
+    prefixSumFreq[0] = 1;
+
+    for (char ch : s) {
+        // Increment prefix sum for 1, decrement for 0
         if (ch == '1') {
-            balance++;
+            prefixSum += 1;
         } else {
-            balance--;
+            prefixSum -= 1;
         }
-        
-        // If the current balance has been seen before, it means there are subsequences from earlier positions
-        // that form a valid subsequence with the current balance (equal number of 0's and 1's).
-        result += balanceCount[balance];
 
-        // Increment the count of the current balance in the map
-        balanceCount[balance]++;
+        // Check how many times this prefix sum has been seen before
+        if (prefixSumFreq.find(prefixSum) != prefixSumFreq.end()) {
+            count += prefixSumFreq[prefixSum];
+        }
+
+        // Update the frequency of the current prefix sum
+        prefixSumFreq[prefixSum]++;
     }
-    
-    return result;
+
+    return count;
 }
 
 int main() {
-    string str;
-    cout << "Enter the binary string: ";
-    cin >> str;
+    string s;
+    cout << "Enter binary string: ";
+    cin >> s;
 
-    int result = countEqualSubsequences(str);
-    cout << "Total number of equal subsequences: " << result << endl;
+    long long result = countEqualZeroOneSubsequences(s);
+    cout << "Number of subsequences with equal number of 0s and 1s: " << result << endl;
 
     return 0;
 }

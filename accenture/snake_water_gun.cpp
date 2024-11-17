@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -25,7 +26,7 @@ int main() {
     int awin = 0;
     int index = 0;
 
-    for (int i = 0; i < n; i++) {
+    while(index<s.size()) {
         
         
         string moveA = "";
