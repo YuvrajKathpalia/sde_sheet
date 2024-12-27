@@ -1,3 +1,5 @@
+//glt h ye
+
 Given a positive integer, rearrange its bits such that all set bits (1s) are positioned consecutively,
  and return the minimum possible value obtained by rearranging the bits in binary form.
 
@@ -31,7 +33,9 @@ int countSetBits(int n) {
 // Function to rearrange the bits to create the minimum possible number
 int rearrangeBits(int n) {
     
-    int setBits = countSetBits(n);
+
+
+
 
     // Step 2: Build the smallest number by placing all set bits at the rightmost
     int result = 0;

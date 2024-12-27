@@ -3,7 +3,6 @@
 //o(1)..
 
 
-
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
@@ -28,30 +27,49 @@ public:
 
 //better...
 //o(n)...
-//o(1)...
+//o(n)...
 
-class Solution {
-public:
-    vector<int> twoSum(vector<int>& nums, int target) {
 
-        unordered_map<int,int>mpp;
+#include <bits/stdc++.h>
+using namespace std;
 
-        int n=nums.size();
+vector<int> twoSum(vector<int>& nums, int target) {
+    int n = nums.size();
+    unordered_map<int, int> mpp;
 
-        for(int i=0;i<n;i++){
+    for (int i = 0; i < n; i++) {
+        int sum = nums[i];
+        int left = target - sum;
 
-            int num = nums[i];
-
-            int moreneeded = target-num;
-
-            if(mpp.find(moreneeded)!=mpp.end()){
-                return {mpp[moreneeded], i};
-            }
-
-            mpp[num]=i;
+        if (mpp.find(left) != mpp.end()) {
+            return {i, mpp[left]};
         }
-
-        return {-1,-1};
-        
+        mpp[sum] = i;
     }
-};
+
+    return {-1, -1};
+}
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<int> nums(n);
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
+
+    int target;
+    cin >> target;
+
+    vector<int> ans = twoSum(nums, target);
+
+    // Print the result
+    if (ans[0] == -1 && ans[1] == -1) {
+        cout << "No solution found" << endl;
+    } else {
+        cout << ans[0] << " " << ans[1] << endl;
+    }
+
+    return 0;
+}

@@ -5,8 +5,20 @@ https://leetcode.com/problems/happy-number/description/
 //o(logn)
 //o(logn)..
 
-class Solution {
-public:
+
+
+
+//easy..famous...
+//o(logn)
+//o(logn)..
+
+//tc..o(k*logn)... but y k finit hoga obviously.. to ..o(logn) hi bnegi bas..
+//sc...o(1).. set ki ni hogi constant space hi lega...maximum kitne hi number store krlega ek time pe repeat honge...
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
 
 
  int getNextNumber(int n) {  //19 ayga to 82 dena..digit nikalne jaise nikalte..nikalne ke baad square krdena..
@@ -35,9 +47,22 @@ public:
         return n==1;
     }
 
-};
 
 
+int main(){
+    
+    int n;
+    cin>>n;
+    
+   int ans = isHappy(n);
+   cout<<ans;
+   
+   //return ans;
+    
+    
+    
+    
+}
 
 //better..use floyd detection...(slow-fast)pointers..instead of maintaining a set(set islie use kra tha
 //kyuki jab happy number ni hoga input tab eventually wo cycle form krlega..repeaat hone lgjega..)(islie set se pta chl jata jab repeat hoyga..jab hoyga bahar ajege..)
@@ -46,6 +71,9 @@ public:
 
 //o(logn)..
 //o(1)..
+
+//iski to kuch space compelxity ni bilkul bhi na..
+
 
 class Solution {
 public:
