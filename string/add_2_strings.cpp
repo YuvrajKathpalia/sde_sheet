@@ -1,5 +1,6 @@
 
 //easy..silly..imp.
+//impp..
 
 //peeche se shuru add krna..carry=0 let krlena shuru me.
 //sum kro..carry update krlena..aur result string me %10 krke push back...

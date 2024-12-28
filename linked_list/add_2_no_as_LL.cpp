@@ -1,44 +1,59 @@
-
-
-//o(max(m,n)+1)===o(m or n)
-//o(max(m,n))==o(m or n)
-
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-struct ListNode {
-    int val;
-    ListNode* next;
-    ListNode(int x) : val(x), next(NULL) {}
+
+
+class Node {
+public:
+    int data;   // Data stored in the node
+    Node* next; // Pointer to the next node in the list
+
+    Node(int data1) {   //main isi contructor ka kaam hai
+        data = data1;
+        next = nullptr;
+    }
+    
+    Node(int data1,Node* next1){
+        data=data1;
+        next=next1;
+    }
 };
 
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 
-    ListNode* dummy = new ListNode(-1);
-    ListNode* temp = dummy;
-    int carry = 0;
+        ListNode* dummy = new ListNode(-1);
+        ListNode* temp =dummy;
 
-    while (l1 != NULL || l2 != NULL || carry) {
-        int sum = 0;
+        int carry=0;
 
-        if (l1 != NULL) {
-            sum += l1->val;
-            l1 = l1->next;
+
+        while(l1 || l2 || carry){
+
+            int sum=0;
+
+            if(l1!=NULL){
+                sum+=l1->val;
+                l1=l1->next;
+            }
+             if(l2!=NULL){
+                sum+=l2->val;
+                l2=l2->next;
+            }
+
+            sum += carry;
+            
+            carry= sum/10;
+
+            temp->next = new ListNode(sum%10);
+            temp=temp->next;
+
         }
 
-        if (l2 != NULL) {
-            sum += l2->val;
-            l2 = l2->next;
-        }
-
-        sum += carry;
-        carry = sum / 10;
-        temp->next = new ListNode(sum % 10);
-        temp = temp->next;
+        return dummy->next;
+        
     }
 
-    return dummy->next;
-}
+
 
 void printList(ListNode* head) {
     while (head != NULL) {
@@ -48,49 +63,67 @@ void printList(ListNode* head) {
     cout << endl;
 }
 
-ListNode* createListFromInput() {
-    cout << "Enter the elements of the linked list (space-separated, -1 to end): ";
-    ListNode* head = NULL;
-    ListNode* tail = NULL;
-    int value;
 
-    while (true) {
+
+int main() {
+    int n1, n2;
+
+    // Input for the first linked list
+    cout << "Enter the number of nodes for the first linked list: ";
+    cin >> n1;
+
+    ListNode* l1 = nullptr;  //head..
+    ListNode* tail1 = nullptr;
+
+    cout << "Enter the values for the first linked list: ";
+    for (int i = 0; i < n1; i++) {
+        int value;
         cin >> value;
-        if (value == -1) {
-            break; // -1 indicates end of input
-        }
 
         ListNode* newNode = new ListNode(value);
-        if (head == NULL) {
-            head = newNode; // Initialize the head if it's NULL
-            tail = head;    // Initialize tail
+        if (l1 == nullptr) {
+            l1 = newNode;
+            tail1 = newNode;
         } else {
-            tail->next = newNode; // Link new node at the end
-            tail = newNode;       // Move tail pointer
+            tail1->next = newNode;
+            tail1 = newNode;
         }
     }
 
-    return head;
-}
+    // Input for the second linked list
+    cout << "Enter the number of nodes for the second linked list: ";
+    cin >> n2;
 
-int main() {
-    // Create first linked list
-    cout << "Create first linked list:\n";
-    ListNode* l1 = createListFromInput();
+    ListNode* l2 = nullptr;
+    ListNode* tail2 = nullptr;
 
-    // Create second linked list
-    cout << "Create second linked list:\n";
-    ListNode* l2 = createListFromInput();
+    cout << "Enter the values for the second linked list: ";
+    for (int i = 0; i < n2; i++) {
+        int value;
+        cin >> value;
+
+        ListNode* newNode = new ListNode(value);
+        if (l2 == nullptr) {
+            l2 = newNode;
+            tail2 = newNode;
+        } else {
+            tail2->next = newNode;
+            tail2 = newNode;
+        }
+    }
+
+    // Print the original linked lists
+    cout << "First Linked List: ";
+    printList(l1);
+    cout << "Second Linked List: ";
+    printList(l2);
 
     // Add the two numbers
     ListNode* result = addTwoNumbers(l1, l2);
 
-    // Print the result
-    std::cout << "Result: ";
+    // Print the resultant linked list
+    cout << "Resultant Linked List: ";
     printList(result);
-    
+
     return 0;
 }
-
-
-// struct ListNode defines a new structure type named ListNode. In C++, a struct is similar to a class but defaults to public access for its members.

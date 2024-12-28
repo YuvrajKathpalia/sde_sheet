@@ -1,5 +1,4 @@
 
-
 //iterative..optimal.o(N)..o(1)...
 
 //ek pointer se hi hojega...loop lgao,pointer maintain kro..zero ata jara to chlte jao..non zero aya to swap krdo.aur pointer ko age lechlo...ase krte krte non zero shuru me ajege..aur zero last me..

@@ -1,4 +1,4 @@
-
+//bhot acha...famous...
 
 
 //brute force..
@@ -15,6 +15,7 @@ class Solution {
             int sum = 0;
 
             for (int j = i; j < n; j++) {
+
                 sum += arr[j];  // Calculate sum of subarray from i to j
                 
                 if (sum == 0) {
