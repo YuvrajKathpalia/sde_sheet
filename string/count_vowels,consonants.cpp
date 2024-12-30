@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+
 void countVowelsAndConsonants(string s) {
     int vowels = 0, consonants = 0;
 

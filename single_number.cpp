@@ -34,7 +34,7 @@ class Solution {
 //hojege...
 //jo ek rehjayga whi odd hoyga..
 
-//o(n)..o(n)..
+//o(n)..o(1)..
 
 class Solution {
   public:

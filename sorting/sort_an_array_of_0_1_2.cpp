@@ -1,6 +1,7 @@
 
 
 
+
 //brute force..nlogn..
 
 class Solution {
@@ -63,7 +64,6 @@ public:
 
 
 
-
 //optimal...
 //dutch national flag problem..
 
@@ -73,7 +73,7 @@ public:
 
 
 
-// ### Dutch National Flag Problem - Summary(3 pointers maintain krenge low ar high se 0 aur 2 ki boundary maintain
+// ### Dutch National Flag Problem - Summary(3 pointers maintain krenge low aur high se 0 aur 2 ki boundary maintain
 //krenge...aur mid see travserse krenge elements shuru se leke end tak...)
 
 // The objective of the Dutch National Flag problem is to sort an array of three distinct values (e.g., 0, 1, 2) efficiently in linear time `O(n)` using constant space `O(1)`.
@@ -96,6 +96,16 @@ public:
 // **Outcome:** The array is sorted in `O(n)` time with `O(1)` space, efficiently placing all 0s, 1s, and 2s in their correct order.
 
 // This approach is ideal for problems like sorting colors represented by 0s, 1s, and 2s.
+
+
+
+
+//MTLB SEEDHA SEEDHA YHI HIA..3 POINTERS LEKE KHEL RHE HAI HUM...
+//LOW AUR HIGH KO SHURU AUR LAST ME RKHDIA RESPECTIEVLY...AUR MID POINTER SE ARRAY TRAVERSE KRRE..
+//AGAR 0 ARA TO LOW SE SWAP KRDENGE AUR MID++ LOW++..AGAR 1 HI ARA TO MID++ BAS... AGAR 2 ARA TO HIGH SE SWAP AUR HIGH--
+
+//YE WAKI APPROACH UPAR WALI SE BETTER KYUKI ISME KUM OPERATIONS HONGE AUR INPLACE SORTING KEHSKTE NA..
+//HAI JABKI COMPLEXITY DONO KI ...O(N)..O(1)..
 
 
 class Solution {
@@ -128,7 +138,10 @@ public:
             else{  //nums[mid]==2
               
               swap(nums[mid],nums[high]);
-              high--;
+              high--;  
+              //IDHAR MID++ NI KRENGE KYUKI KYA PTA HIGH PE 0 PDA HO TO WO AGR MID PE AGYA USE LOW SE DUBARA
+              //SWAP BHI TO KRNA PDEGA NA..
+
 
               //taki high+1 se last tak 2 milje..
             }
