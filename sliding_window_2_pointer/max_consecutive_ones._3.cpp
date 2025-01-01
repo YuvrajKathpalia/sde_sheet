@@ -1,7 +1,8 @@
 https://leetcode.com/problems/max-consecutive-ones-iii/description/
 
 
-//brute...o(n^2)..nested loops..khud.
+//brute..easy..
+//.o(n^2)..nested loops..khud.
 
 //agar 1 ara count++ krte rho , agar 0 ara aur changes<k tab bhi krte rho , wrna k changes hochuke uske baad bhi
 //zero ara to break krjao maxlength update krlena...chlte rhege aise loops.
@@ -44,7 +45,7 @@ public:
 //2 pointer sliding window...
 
 
-//zerociunt maintain rkenge ayga ++ krenge...agar out of boun > k hogya...to shrink krna pdega lef++ (aur nums[left] bhi 0
+//zerociunt maintain rkenge ayga ++ krenge...agar out of bound > k hogya...to shrink krna pdega lef++ (aur nums[left] bhi 0
 //hua to zerocount-- bhi krna pdega..)aur left++ krdena...aur valid condition hai to maxlength update... aur right++...return
 //maxlength krdena..
 

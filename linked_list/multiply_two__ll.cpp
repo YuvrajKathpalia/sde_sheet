@@ -4,6 +4,7 @@
 //o(n+m)
 //o(1)
 
+
 class solution {
   public:
     long long multiplyTwoLists(Node *first, Node *second) {
@@ -27,3 +28,4 @@ class solution {
         return (num1*num2)%1000000007;
     }
 };
+
