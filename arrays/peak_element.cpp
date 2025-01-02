@@ -1,5 +1,5 @@
 
-https://www.geeksforgeeks.org/problems/peak-element/1?page=1&sortBy=submissions
+https://leetcode.com/problems/find-peak-element/
 
 //brute..o(n)..o(1)
 
@@ -11,8 +11,7 @@ public:
         
         int n=arr.size();
         
-        
-       
+              
         if (n == 1){
             return 0;
         }
@@ -26,6 +25,7 @@ public:
                 if (arr[i] >= arr[i + 1])
                     return i;
             }
+
             else if (i == n - 1)
             {
                 if (arr[i] >= arr[i - 1])
@@ -46,6 +46,12 @@ public:
 
 
 //optimal..o(logn)..o(1)
+//BINARY SEARCH..
+
+//The primary objective of the Binary Search algorithm is to
+// efficiently determine the appropriate half to eliminate, 
+//thereby reducing the search space by half. 
+//It does this by determining a specific condition that ensures that the target is not present in that half.
 
 class Solution {
 public:
@@ -67,12 +73,14 @@ public:
             
             if ((mid == 0 || nums[mid] >= nums[mid - 1]) &&
                 (mid == n - 1 || nums[mid] >= nums[mid + 1])) {
+
                 return mid;
             }
 
 
             // If mid is in a rising slope, move right
-            if (mid < n - 1 && nums[mid] < nums[mid + 1]) {
+
+            if (nums[mid] < nums[mid + 1]) {
                 s = mid + 1;
             }
             // Else move left

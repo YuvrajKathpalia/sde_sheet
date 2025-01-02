@@ -75,38 +75,35 @@ public:
 
 //ek hi lloop lgaege...at any point you have to choices include it in the subarray or start a new subarray...
 
-//agar -ve sum bnraa to ..sum =0 reste krdenge.... jo sum positive krra wo add krte rhenge aur
-//maxi maintin krte rhnge...agar kisi bhi jagah sum  -ve bnraa..sum=0 reset krdenge kyuki uske baad koi hi number ane se wo positive ho bhi jayga uska fayda nai , us -ve wale portion ko include ni krnege tab to positve wale ka apna jada hi bnega na...
-//but maxi to har sum ke baad update krna obvio kya pta -ve sum hi largest ho koi...
 
+//approach2...using kadane...
+//easy ..logical..
+
+// The intuition of the algorithm is not to consider the subarray as a part of the answer
+//  if its sum is less than 0. A subarray with a sum less than 0 will 
+// always reduce our answer and so this type of subarray cannot be a part of the subarray with maximum sum...
+//matlab 2 WAYS HOSKTE HAR ELEMENT PE YA CURRSUM ME ADD UP KRTE JAO , YA WHA SE NAYA SUM SHURU KRO...
 
 
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
 
-        int n=nums.size();
-        int maxi=INT_MIN;
 
-        int sum=0;
+        int n = nums.size();
+        int maxSum = nums[0];  
+        int currSum = nums[0]; 
 
-        for(int i=0;i<n;i++){
+        for(int i = 1; i < n; i++) {
 
-        sum += nums[i];
+            // Either start a new subarray at nums[i] or extend the current subarray
+            currSum = max(nums[i], currSum + nums[i]);
 
-        // if(sum>maxi){
-        //     maxi = sum;
-        // }
-
-        maxi = max(maxi,sum);
-
-        if(sum<0){
-            sum=0;
+            // Update the maximum sum encountered so far
+            maxSum = max(maxSum, currSum);
         }
-            }
 
-        return maxi;
-        
+        return maxSum;
     }
 };
 
@@ -114,67 +111,44 @@ public:
 
 //FOLLOW-UP-QUESTION...AGAR SUBARRAY PRINT KRANE KO BHI BOLE...
 
-//JHA SUM ZERO -VE HORA.WHA SUM=0 KRDETE THE NA..TO USKE AGLE
-//INDEX STORE KRLIO AS A POTENTIAL START INDEX...
 
-//CHLTA RHEGA...
 
-//AGAR SUM>MAXSUM SE BDA AGYA...TO START INDEX KO US TEMP INDEX SE REPLACE
-//KARDO ..AUR END INDEX TO I HI RHEGA....
 
-#include <bits/stdc++.h>
-using namespace std;
+class Solution {
+public:
+    vector<int> maxSubArray(vector<int>& nums) {
 
-int maxSubArray(vector<int>& nums) {
-    int n = nums.size();
-    int maxi = INT_MIN;  // To store the maximum sum
-    int sum = 0;         // To store the current sum
-    
-    int start = 0;       // To track the start index of the subarray
-    int end = 0;         // To track the end index of the subarray
-    int tempStart = 0;   // Temporary start index to track possible new subarray
 
-    for (int i = 0; i < n; i++) {
-        sum += nums[i];
+        int n = nums.size();
+        int maxSum = nums[0];  
+        int currSum = nums[0];  
 
-        // If the current sum is greater than the previous maximum sum
-        if (sum > maxi) {
-            maxi = sum;
-            start = tempStart;  // Update the start index of the maximum sum subarray
-            end = i;            // Update the end index
+
+        int start = 0, end = 0, tempStart = 0;
+
+        for (int i = 1; i < n; i++) {
+
+            // If starting a new subarray is better, update tempStart
+            if (nums[i] > currSum + nums[i]) {
+                currSum = nums[i];
+                tempStart = i;  // Start a new subarray at index i
+            } else {
+                currSum += nums[i];
+            }
+
+            // If we found a new maximum, update maxSum and the subarray boundaries
+            if (currSum > maxSum) {
+                maxSum = currSum;
+                start = tempStart;
+                end = i;  // The end of the subarray is at index 
+                
+            }
         }
 
-        // If the current sum becomes negative, reset it to 0
-        // and set tempStart to the next index
-        if (sum < 0) {
-            sum = 0;
-            tempStart = i + 1;
-        }
+        // Return the subarray from start to end
+        vector<int> result(nums.begin() + start, nums.begin() + end + 1);
+
+
+        return result;
     }
-
-    // Print the subarray with the maximum sum
-    cout << "The subarray with the maximum sum is: ";
-    for (int i = start; i <= end; i++) {
-        cout << nums[i] << " ";
-    }
-    cout << endl;
-
-    return maxi;
-}
-
-int main() {
-    int n;
-    cout << "Enter the number of elements in the array: ";
-    cin >> n;
-
-    vector<int> nums(n);
-    cout << "Enter the elements of the array: ";
-    for (int i = 0; i < n; i++) {
-        cin >> nums[i];
-    }
-
-    int maxSum = maxSubArray(nums);
-    cout << "The maximum sum is: " << maxSum << endl;
-
-    return 0;
-}
+};
