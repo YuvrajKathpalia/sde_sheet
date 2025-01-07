@@ -1,4 +1,52 @@
 
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int f(vector<int>&nums , int index){
+    
+    
+    if(index==0){
+        
+        return nums[index];
+    }
+    
+    if(index<0){
+        return 0;
+    }
+    
+    int pick=0;
+    
+    if(index>1){
+         pick += nums[index]+f(nums,index-2);
+    }
+    
+    int not_pick = 0+ f(nums,index-1);
+    
+    return max(pick,not_pick);
+}
+
+int main()
+{
+    
+    int n;
+    cin>>n;
+    
+    vector<int>robber(n);
+    
+    for(int i=0;i<n;i++){
+        cin>>robber[i];
+    }
+    
+    
+    
+    int ans = f(robber,n-1);
+    
+    cout<<ans;
+
+    return 0;
+}
+
 
 // recursion..o(2^n)..o(n)..
 

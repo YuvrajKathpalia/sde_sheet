@@ -9,6 +9,8 @@ https://leetcode.com/problems/isomorphic-strings/
 //o(n)..
 //o(26)==o(1)..
 
+
+
 class Solution {
 public:
     bool isIsomorphic(string s, string t) {

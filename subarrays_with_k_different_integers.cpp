@@ -1,4 +1,4 @@
-
+//better..sw 2 pointer...(no of subbarys with <=k diff integer - no of sub with <=k-1 diff integer)
 
 //brute force..
 //o(n^2)..
@@ -60,7 +60,6 @@ int solve(vector<int>&nums , int k){
 
         int l=0;
         int r=0;
-
         int count=0;  
 
         while(r<n){

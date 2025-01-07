@@ -25,8 +25,10 @@ https://leetcode.com/problems/count-and-say/
 //fir ab ans ko update krna pdega temp se har iteration ke baad...1 -11..to ab 11 pe kaam krenge na obvio...---...
 
 
-//tc..o(2^n).. in worst case...har iteration me max to max dobe hori na length...
-//sc=o(1)..
+//tc..o(2^n).. in worst case...har iteration me max to max double hori na length...
+//sc=o(2^n).....
+
+//but n chota number hi hai constraint ke according to ye chljaygi no issues...
 
 
 
@@ -55,7 +57,7 @@ public:
             }
            }
 
-           temp += to_string(count) + ch;  //jaise 1 ka 11 ..
+           temp += to_string(count) + ch;  //last elemnt ke lie..
            ans=temp;                     //ab jaise 11 pe chlega yhi same loop
          }
 

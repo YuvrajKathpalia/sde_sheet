@@ -11,6 +11,7 @@
 // - **`long`** also usually has 4 bytes (32 bits) on most systems but can be 8 bytes on others.
 // - **`long long`** is at least 8 bytes (64 bits), with a much larger range.
 
+
 class Solution {
 public:
     int myAtoi(string s) {
@@ -52,7 +53,7 @@ public:
 
             else{  //0-9ke beech ni hai..whi return krdo ans jo bnrkha abhi tkkk
                 
-                return ans*sign;
+                return ans*sign;  //retun break; bhi chljata...
             }
         }
 

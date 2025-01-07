@@ -8,7 +8,6 @@ https://www.geeksforgeeks.org/problems/check-if-string-is-rotated-by-two-places-
 //o(N)..
 //o(n).
 
-
 class Solution {
   public:
     bool isRotated(string s1, string s2) {
