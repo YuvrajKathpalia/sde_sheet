@@ -11,7 +11,9 @@ int countMerrySubstrings(const string& s) {
     // Iterate over all substrings
     for (int i = 0; i < n; i++) {
         unordered_set<char> charSet;
+        
         for (int j = i; j < n; j++) {
+
             if (charSet.find(s[j]) != charSet.end()) {
                 // If character is repeated, break
                 break;

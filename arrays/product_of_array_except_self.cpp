@@ -4,6 +4,7 @@
 //o(n^2)..
 //o(n)..
 
+
 class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
@@ -51,6 +52,8 @@ public:
 
 //o(n)..
 //o(n)...
+
+
 
 
 

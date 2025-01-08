@@ -136,17 +136,15 @@ int countSubarraysWithXOR(vector<int>& nums, int K) {
     int count = 0;
     int currentXor = 0;
 
-    // Traverse the array
+    
     for (int i = 0; i < n; i++) {
+
         // Compute prefix XOR up to the current element
         currentXor ^= nums[i];
 
-        // If the XOR up to the current index equals K, we found a subarray
-        if (currentXor == K) {
-            count++;
-        }
-
+    
         // Check if (currentXor ^ K) exists in the prefix map
+        
         if (prefixXorCount.find(currentXor ^ K) != prefixXorCount.end()) {
             count += prefixXorCount[currentXor ^ K];
         }

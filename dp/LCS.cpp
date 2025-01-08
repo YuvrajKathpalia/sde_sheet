@@ -8,7 +8,7 @@
 //o(2^m* 2^n)...o(n)..
 
 
-//(BRUTE FORCE SOLUTION BHI HAI SBSE NEECHE...)
+//(BRUTE FORCE SOLUTION BHI HAI SBSE NEECHE...).
 
 class Solution {
 public:

@@ -2,7 +2,7 @@
 https://leetcode.com/problems/longest-common-prefix/
 
 
-//o(n.mlogn) ... sorting vector of strings...
+//o(m.nlogn) ... sorting vector of strings...
 //o(m)... (size of ans string)
 
 class Solution {
@@ -41,21 +41,29 @@ public:
 //usse better..nested loops..
 //o(m*n)..
 
+
+
+
+
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
+
+
         int n = strs.size();
-        if (n == 0 || strs[0].empty()) return ""; // Handle empty input or empty first string
+
+        if (strs[0].empty()) return ""; 
 
         string ans = "";
 
-        for (int i = 0; i < strs[0].size(); i++) {
+        for (int i = 0; i < strs[0].size(); i++) {  //silly <n ni..phli string ke size ki jitna chlega na..
             char ch = strs[0][i];
 
             // Check if character at index `i` is the same across all strings
+
             for (int j = 1; j < n; j++) {
                 if (i >= strs[j].size() || strs[j][i] != ch) {
-                    return ans;  // Return `ans` immediately if mismatch found
+                    return ans;                  // Return `ans` immediately if mismatch found
                 }
             }
             
