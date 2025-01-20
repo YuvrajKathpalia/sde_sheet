@@ -42,7 +42,6 @@ public:
 //n square....
 
 
-
 class Solution {
 public:
     int longestKSubstr(string s, int k) {

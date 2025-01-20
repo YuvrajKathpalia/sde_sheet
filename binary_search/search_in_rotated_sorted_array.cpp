@@ -5,6 +5,7 @@
 //ab dono if/else ke andrr 
 //individually normal binary search lgake target dhundho ..eliminate hote jayge hisse..
 
+
 //o(logn)
 //o(1)..
 

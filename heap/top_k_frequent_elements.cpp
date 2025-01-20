@@ -28,10 +28,10 @@ public:
 
         for (auto& x : freqMap) {
 
-            pq.push({x.second, x.first});
+            pq.push({x.second, x.first});  //o(nlogk)..
 
             // If heap size exceeds k, remove the least frequent element
-            if (pq.size() > k) {
+            if (pq.size() > k) {  //o(nlogk)..
                 pq.pop();
             }
         }

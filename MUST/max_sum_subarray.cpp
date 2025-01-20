@@ -76,9 +76,6 @@ public:
 //ek hi lloop lgaege...at any point you have to choices include it in the subarray or start a new subarray...
 
 
-//approach2...using kadane...
-//easy ..logical..
-
 // The intuition of the algorithm is not to consider the subarray as a part of the answer
 //  if its sum is less than 0. A subarray with a sum less than 0 will 
 // always reduce our answer and so this type of subarray cannot be a part of the subarray with maximum sum...

@@ -29,7 +29,9 @@ public:
 
 
 
-//HAR STEP PE CUR MAX, CURR MIN PRODUCT MAINTAIN KRTE RHE...(ya to include kro , ya pichle currmax/currmin se multiply kro) 
+//HAR STEP PE CUR MAX, CURR MIN PRODUCT MAINTAIN KRTE RHE...
+//(ya to include kro , ya pichle currmax/currmin se multiply kro) 
+
 //aur agar negative element ara to currmax aur currmin ko swap krdo..
 //kyuki agar currmin -ve chalra, to ek aur -ve number ane se wo currmax banskta haii isliye 
 //maxproduct to hum update kr hi rhe h har iteration me..

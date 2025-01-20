@@ -13,8 +13,8 @@ public:
       
       set<vector<int>> output;   //set apna..duplicate hatane ke lie
 
-for (int i = 0;i<n;i++) {
-  for(int j = i+1;j<n; j++) {
+for (int i = 0;i<n-2;i++) {
+  for(int j = i+1;j<n-1; j++) {
      for(int k = j+1; k<n; k++) {
 
          if(nums[i] + nums[j] + nums[k] == 0) {
@@ -136,8 +136,15 @@ for (int i = 0;i<n;i++) {
 //approach threee.better ..isme hashset einsert ni krrreee ...isme bas whi two d setof vector lia
 //store krne lie...aur usse answer baadme two d vector me daldia..phle hi sort krdia aur isme
 
-//o n^sq
+//o(n^2.logm)... where m is no of unqoue triplets..
 //o n^sq...
+
+
+//we know..unordered set me tc... o(logm)..aur normal me..o(m)..
+//unordred be bst use hota...aur normal me hash table..
+
+//unordeed aur normal map me bhi yhi hota...
+
 
 
 class Solution {
@@ -174,7 +181,6 @@ public:
                 }
             }
         }
-
 
         for(auto x : s){
             output.push_back(x);

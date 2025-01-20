@@ -1,3 +1,15 @@
+//duplicate value bhi hoskti..but uski tension ni hume to true/false return krna
+
+//ek if condition extra lgani pdegi...agar jaise mid pe ho ..
+//na to wo s bada hai hai na e se bada jo hum sorted half nikalpaye
+//aur wo left aur right dono ke equal hai..
+//like this--..3 1 2 3 is one half, and 3 3 3 is another half and our mid is element 3 also it at index '3'
+
+//ab kis half ko elminiate kroge??...ase me if condition lgadena..s+..e--. 
+//krke next iteration pe chle jana..
+
+
+
 class Solution {
 public:
     bool search(vector<int>& nums, int target) {
