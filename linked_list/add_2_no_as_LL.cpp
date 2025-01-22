@@ -1,3 +1,16 @@
+
+
+//jo ye solution hai ye eetcode ka hai..usme phle se given hai ki 
+//linked list reversed hai...isliye hum starting se traverse krskte hai..
+//kyuki we know addition least significant yaani peeche se shuru hota hai...
+
+//but generally question me nia dia hoga ki rversed hai list...
+//neeche gfg ka solution hai jisme given ni hai..
+//ad done to ll wala bhi same treeke se hoga..
+
+//o(max(m,n))..
+//o(max(m,n))..
+
 #include <iostream>
 using namespace std;
 
@@ -13,7 +26,7 @@ public:
         next = nullptr;
     }
     
-    Node(int data1,Node* next1){
+    Node(int data1,Node* next1){ //in wale questions me jha user input krvara... usme ye bhi jroori ..kyuki tail->next=newnode...ye sab to krre na
         data=data1;
         next=next1;
     }
@@ -45,7 +58,7 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
             carry= sum/10;
 
             temp->next = new ListNode(sum%10);
-            temp=temp->next;
+            temp=temp->next;  //silly..
 
         }
 
@@ -127,3 +140,72 @@ int main() {
 
     return 0;
 }
+
+
+
+
+class Solution {
+  public:
+  
+  
+  Node* reverse(Node* head){
+      
+      
+      Node* curr=head;
+      Node* prev=NULL;
+      Node* forward=NULL;
+      
+      while(curr!=NULL){
+          
+          forward=curr->next;
+          curr->next=prev;
+          prev=curr;
+          curr=forward;
+      }
+      
+      return prev;
+  }
+    Node* addTwoLists(Node* num1, Node* num2) {
+        
+        num1 = reverse(num1);
+        num2= reverse(num2);
+        
+        
+        Node* dummy = new Node(-1);
+        Node* temp= dummy;
+        
+        int carry=0;
+        
+        while(num1 || num2 || carry ){
+            
+            int sum=0;
+            
+            if(num1!=NULL){
+                sum += num1->data;
+                num1=num1->next;
+            }
+            
+            if(num2!=NULL){
+                sum += num2->data;
+                num2=num2->next;
+            }
+            
+            
+            sum += carry;
+            
+            carry=sum/10;
+            
+            temp->next= new Node(sum%10);
+            temp=temp->next;
+            
+        }
+        
+        
+        Node* reversedlist = reverse(dummy->next);
+         
+        while(reversedlist!=NULL && reversedlist->data==0){
+            reversedlist= reversedlist->next;
+        }
+        return reversedlist;
+    }
+};

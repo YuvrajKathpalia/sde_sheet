@@ -2,6 +2,11 @@
 //BRUTE FORCE..
 //ITERATIVE...
 
+
+//har point ke liye uske se leke usse left jate jayge
+//kitna area max banskta hai...height= min wali lenge jo wha tak hogi ...obvio..
+
+
 //loop lgao...o se n tk chalege....har point pe.
 //.minheight nikaalo wha tak ki ...ek aur loop lgake...
 
