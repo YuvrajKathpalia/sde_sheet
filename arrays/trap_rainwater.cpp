@@ -36,7 +36,10 @@
 
 //brute force...
 
-//o(n^2)..//o(1)...
+//o(n^2).....o(n^3)ni hai..The outer loop runs o(N) iterations, and for each iteration, 
+//the two inner loops run o(N)..
+
+//sc..o(1).
 
 //har index kelie phlele leftmax nikal liaa(while loop)..similalrly fir 
 //right max nikal lia...

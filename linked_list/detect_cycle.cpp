@@ -1,7 +1,6 @@
 //brute force..hashmap....o(n)..o(n)..
 
 //dono complexity..o(n)
-
 //approach 1 using hashmap..
 
 
@@ -33,10 +32,10 @@ return false;
 
 
 
-The solution uses the **Floyd’s Tortoise and Hare** algorithm
- to detect a cycle in a linked list. A fast pointer (moves two steps) 
- and a slow pointer (moves one step) traverse the list. 
- If a cycle exists, the two pointers will eventually meet; otherwise, the fast pointer reaches the end.
+// The solution uses the **Floyd’s Tortoise and Hare** algorithm
+//  to detect a cycle in a linked list. A fast pointer (moves two steps) 
+//  and a slow pointer (moves one step) traverse the list. 
+//  If a cycle exists, the two pointers will eventually meet; otherwise, the fast pointer reaches the end.
 
 
 

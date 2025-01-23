@@ -2,6 +2,11 @@
 //BRUTE FORCE..
 //ITERATIVE...
 
+
+//har point ke liye uske se leke usse left jate jayge
+//kitna area max banskta hai...height= min wali lenge jo wha tak hogi ...obvio..
+
+
 //loop lgao...o se n tk chalege....har point pe.
 //.minheight nikaalo wha tak ki ...ek aur loop lgake...
 
@@ -9,8 +14,6 @@
 
 //o(n^2)..
 //o(1)...
-
-
 
 
 
@@ -79,7 +82,7 @@ vector<int> nextSmaller(vector<int>& heights) {
     stack<int> st;  //initially kuch push ni kra..-1 bhi...kyuki jab empty stack hai ya koi nse possible ni hum n hi return krenge..
     //taki poori width cover kar payyee..logical baat hai...
 
-    vector<int> ans(n); 
+    vector<int> ans(n);  //declare krnaa must..iske bina ni chlra tha..
 
     // We start from the end of the array...
 

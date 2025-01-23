@@ -106,7 +106,7 @@ vector<int> previousSmaller(vector<int>& heights) {
 
     int n = heights.size();
     stack<int> st;
-    vector<int> ans(n);
+    vector<int> ans(n);  //declare krnaa must..iske bina ni chlra tha..
 
     // We start from the beginning of the array
     for (int i = 0; i < n; i++) {
