@@ -2,6 +2,7 @@
 //o(n)
 //o(n)
 
+
 //easy doable..khud...
 //stack<char>lo..
 //loop lgao.. agar open brakcet to push..
@@ -12,6 +13,7 @@
 //agar st empty haoi phle se tb bhi false(closing to opening ke baad hi ayga)
 
 //last me st empty hai to true ,,warna false..
+
 
 
 

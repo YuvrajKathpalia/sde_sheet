@@ -71,6 +71,10 @@ int f(int index1, int index2, string s1, string s2 , vector<vector<int>>&dp ){
 };
 
 //ya fir ase indexing theek krdo..m+1,n+1 ki dp hi leli..
+//mtlb phle 0 se m-1 , aur 0 se n-1 tak cover krre the
+//ab 1 se m , aue 0 se n kr re hai...
+
+
 //aur base case bhi equal to zero hogya
 //aur if cindtion me index check -1 krke krlia...
 

@@ -13,6 +13,8 @@
 
 //last me st empty hai to true ,,warna false..
 
+//o(n)..
+//o(n)..
 
 
 class Solution {
