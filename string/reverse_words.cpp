@@ -33,10 +33,14 @@ string reverseWords(string s) {
 
     // Traverse the string
     while (left <= right) {
+
         char ch = s[left];
+
         if (ch != ' ') {
             temp += ch;
-        } else {
+        } 
+        
+        else {
             if (!temp.empty()) { // Add the word to ans
                 if (!ans.empty()) {
                     ans = temp + " " + ans;
@@ -49,7 +53,8 @@ string reverseWords(string s) {
         left++;
     }
 
-    // Handle the last word
+    // Handle the last or single word
+    
     if (!temp.empty()) {
         if (!ans.empty()) {
             ans = temp + " " + ans;

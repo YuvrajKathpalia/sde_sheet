@@ -7,8 +7,9 @@ https://leetcode.com/problems/isomorphic-strings/
 //dono ke lie map bnana pdega..khi se bhi inconsistent maping milgyi to false..
 
 //o(n)..
-//o(26)==o(1)..
+//o(n)...
 
+//example..egg and tee
 
 
 class Solution {
@@ -30,7 +31,7 @@ public:
 
             if (mp1.find(s[i]) != mp1.end()) {
 
-                if (mp1[s[i]] != t[i]) {
+                if (mp1[s[i]] != t[i]) {  //mapping miljati gar to t[i] ke equal hi honi chie..
                     return false; 
                 }
             } 
@@ -40,7 +41,9 @@ public:
             }
 
             // Check for t to s mapping
+
             if (mp2.find(t[i]) != mp2.end()) {
+
                 if (mp2[t[i]] != s[i]) {
                     return false; 
                 }

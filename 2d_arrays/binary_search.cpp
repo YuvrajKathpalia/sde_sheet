@@ -31,7 +31,11 @@ int main() {
     cin >> n;
 
     vector<vector<int>> matrix(m, vector<int>(n));
+
+    
+
     cout << "Enter matrix elements row by row:\n";
+    
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
             cin >> matrix[i][j];

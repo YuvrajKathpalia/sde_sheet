@@ -23,18 +23,17 @@ string reverseWords(string s) {
     string temp = "";
     string ans = "";
 
-    int left = 0;
-    int right = s.length() - 1;
 
     // Trim leading spaces
-    while (s[left] == ' ') {
+    int i=0;
+    while (s[i] == ' ') {
         left++;
     }
 
     // Traverse the string
-    while (left <= right) {
+    while (i<n) {
 
-        char ch = s[left];
+        char ch = s[i];
 
         if (ch != ' ') {
             temp += ch;
