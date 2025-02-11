@@ -136,8 +136,12 @@ for (int i = 0;i<n-2;i++) {
 //approach threee.better ..isme hashset einsert ni krrreee ...isme bas whi two d setof vector lia
 //store krne lie...aur usse answer baadme two d vector me daldia..phle hi sort krdia aur isme
 
-//o(n^2.logm)... where m is no of unqoue triplets..
-//o n^sq...
+//binary search ki tarah...sort krdia.. ek loop bahar(i sambhalra)..andar while
+//loop se j(i+1) aur k(n-1) me b inary search type lagado...
+
+//..o(nlogn) sorting ki + o(n^2)..nested for ,while loop..as whileloop me set insertion bhi haina
+
+//sc..o(N).....
 
 
 //we know..unordered set me tc... o(logm)..aur normal me..o(m)..
@@ -156,7 +160,7 @@ public:
 
         set<vector<int>> s;
 
-        vector<vector<int>> output;
+        
 
         for (int i = 0; i < nums.size(); i++){
 
@@ -182,10 +186,12 @@ public:
             }
         }
 
+        vector<vector<int>> ans;
+
         for(auto x : s){
-            output.push_back(x);
+            ans.push_back(x);
         }
 
-        return output;
+        return ans;
     }
 };

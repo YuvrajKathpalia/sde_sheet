@@ -27,7 +27,7 @@ string reverseWords(string s) {
     // Trim leading spaces
     int i=0;
     while (s[i] == ' ') {
-        left++;
+        i++;
     }
 
     // Traverse the string
@@ -49,7 +49,7 @@ string reverseWords(string s) {
             }
             temp = ""; // Reset temp for the next word
         }
-        left++;
+        i++;
     }
 
     // Handle the last or single word

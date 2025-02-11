@@ -38,7 +38,8 @@ int f(int index1, int index2, string s1, string s2 ){
 
 //approach2..
 //MEMOIZATION...
-//o(M*N))...o(M+N)+O(M*N)..
+//o(M*N))...
+//o(M+N)+O(M*N)....sily
 
 class Solution {
 public:

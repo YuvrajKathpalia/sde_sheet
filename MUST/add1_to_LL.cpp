@@ -39,7 +39,9 @@ class Solution {
        
        while(head || carry){
            
-           int sum = (head?  head->data :0) + carry;
+           int sum = (head?  head->data :0) ;
+
+           sum += carry;
            
            carry=sum/10;
            
@@ -55,6 +57,7 @@ class Solution {
        Node* reversed = reverse(dummy->next);
        
        return reversed;
+   
        
     }
 };

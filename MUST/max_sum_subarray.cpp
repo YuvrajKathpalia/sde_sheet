@@ -69,7 +69,6 @@ public:
 
 
 
-
 //optimaal...o(n)...kadane algorithm...logical hai poora..
 //o(1)..
 
@@ -80,6 +79,7 @@ public:
 //  if its sum is less than 0. A subarray with a sum less than 0 will 
 // always reduce our answer and so this type of subarray cannot be a part of the subarray with maximum sum...
 //matlab 2 WAYS HOSKTE HAR ELEMENT PE YA CURRSUM ME ADD UP KRTE JAO , YA WHA SE NAYA SUM SHURU KRO...
+
 
 
 class Solution {

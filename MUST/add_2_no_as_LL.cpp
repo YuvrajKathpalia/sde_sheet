@@ -1,6 +1,6 @@
 
 
-//jo ye solution hai ye eetcode ka hai..usme phle se given hai ki 
+//jo ye solution hai ye Leetcode ka hai..usme phle se given hai ki 
 //linked list reversed hai...isliye hum starting se traverse krskte hai..
 //kyuki we know addition least significant yaani peeche se shuru hota hai...
 
@@ -203,6 +203,13 @@ class Solution {
         
         Node* reversedlist = reverse(dummy->next);
          
+
+        //reversed krne bbad leading zero hatane ke lie..special case
+        //manlo list hai..005,005...ans to 10 ayga..
+        //par revrse krke fir start se addition krne pe 010 fir reverse krne pe 
+        //010 ...toto ye aage wala 0 hatana pdega na...
+
+        
         while(reversedlist!=NULL && reversedlist->data==0){
             reversedlist= reversedlist->next;
         }
