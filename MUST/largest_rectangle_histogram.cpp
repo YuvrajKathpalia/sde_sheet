@@ -106,7 +106,7 @@ vector<int> previousSmaller(vector<int>& heights) {
 
     int n = heights.size();
     stack<int> st;
-    vector<int> ans(n);  //declare krnaa must..iske bina ni chlra tha..
+    vector<int> ans(n);  //declare krnaa must..iske bina ni chlra tha......
 
     // We start from the beginning of the array
     for (int i = 0; i < n; i++) {
@@ -134,6 +134,7 @@ int largestRectangleArea(vector<int>& heights) {
     vector<int> pse = previousSmaller(heights);
 
     int max_area = 0;
+
 
     for (int i = 0; i < n; i++) {
         // Calculate the area considering the current height as the smallest height

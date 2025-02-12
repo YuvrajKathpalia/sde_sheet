@@ -3,8 +3,40 @@ https://leetcode.com/problems/container-with-most-water/description/
 
 //easier earsion of trap rainwater..usme total water nikalna tha..
 
-//isme max water jo 2 container ke beech aaskta..
+//isme max water jo 2 container ke beech aaskta....MATLAB AREA MAXIMISE KRENGE...WIDTH AUR HEIGHT SE..
+//MAIN HEIGHT SE KHELNA MTB.. MIN WALE HEIGHT LENI 2 DANDO ME SE..USI KE BEECH WATER STORE HOSKTA
+///USI SE AREA NIKAL SKTA..
+
 //brute..nested loops..n^2..optimal-2 pointer..o(N).
+
+
+
+//brute--o(n^2)..
+
+        int maxwater=0; 
+        int h=0;
+        int width=0;
+
+        int n=height.size()
+
+        //checking all possible container 
+
+        for(int i=0;i<n;i++) {
+            for(int j=i+1;j<n;j++){
+
+                width=j-i;  
+
+                h=min(height[j],height[i]);
+
+                
+                int area=width*h;      //area of the container
+
+                maxwater=max(area,maxwater);
+
+
+            }
+        }
+        return maxwater;
 
 
 
@@ -41,7 +73,7 @@ public:
 
         ans = max(ans,width*heightt);
 
-        if(height[l]<=height[r]){
+        if(height[l]<=height[r]){  //l try krchuke hai na mtlb agar wo chota to...islie l bdadia....
             l++;
         }
         else{
@@ -57,34 +89,6 @@ public:
 };
 
 
-
-//brute--o(n^2)..
-
-        // int maxwater=0; 
-        // int h=0;
-        // int width=0;
-
-        //int n=height.size()
-
-        // //checking all possible container 
-
-        // for(int left=0;n;left++)
-        // {
-        //     for(int right=left+1;right<n;right++)
-        //     {
-        //         width=right-left;  
-
-        //         h=min(height[left],height[right]);
-
-        //         
-        //         int area=width*h;      //area of the container
-
-        //         maxwater=max(area,maxwater);
-
-
-        //     }
-        // }
-        // return maxwater;
 
 
 

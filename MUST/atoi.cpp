@@ -14,6 +14,7 @@
 // - **`long long`** is at least 8 bytes (64 bits), with a much larger range.
 
 
+
 class Solution {
 public:
     int myAtoi(string s) {
@@ -38,7 +39,7 @@ public:
         }
 
 
-        while(i<s.length()){
+        while(i<n){
 
             if(s[i]>='0' && s[i] <='9'){
 
@@ -63,7 +64,6 @@ public:
         return ans*sign;
 
 
-
-        
+      
     }
 };

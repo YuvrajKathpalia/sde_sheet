@@ -85,7 +85,7 @@ int main() {
 
 
 
-optimal... 2 1d vector lelie row,aur column ke size ke... usse mark krdii ek hi iteration me jha jha zero are the.. [i][j] pe 0 to row[i]=-1, row[j]=-1 .. fir in marked zgaho pe 0 se replace krdia..
+//optimal... 2 1d vector lelie row,aur column ke size ke... usse mark krdii ek hi iteration me jha jha zero are the.. [i][j] pe 0 to row[i]=-1, row[j]=-1 .. fir in marked zgaho pe 0 se replace krdia..
 //tc..o(m*n)...
 //sc...o(m+n)..
 
@@ -127,9 +127,6 @@ public:
                 }
             }
         }
-
-        
-
 
         
     }

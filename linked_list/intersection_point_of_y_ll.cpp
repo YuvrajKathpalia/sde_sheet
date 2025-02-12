@@ -47,6 +47,8 @@ int lengthh(ListNode* node){
             }
         }
 
+        
+
         while(temp1!=NULL && temp2!=NULL){
 
             if(temp1==temp2){

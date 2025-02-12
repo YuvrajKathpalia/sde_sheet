@@ -13,7 +13,9 @@
 
 
 
-//optimal... similar approach , treeke optimise krdia...
+//optimal approach
+
+//... similar approach h sari , treeke optimise krdia...
 //array bnanee ki joorat ni prefix suffix...2 pointer se bhi hojega...
 
 //l ko rkho start me r ko rkho last me... chlao while loop...
@@ -29,7 +31,6 @@
 
 ///while in largest rectangle histogram.. brute-- loop lgao ..har point ke lie.. leftmin nikalo left me ..width nikaldo..i-j+1..fir area nikaldo..
 //optimal-- area=min(area,nextsmaller[i]-prevsmaller[i]-1)..idhr nextsmllaer,prevsmaller..indexes hai..
-
 
 
 

@@ -1,5 +1,6 @@
 //brute force..khud..
 
+
 //o(n^2)..
 //o(n)..
 
@@ -96,7 +97,6 @@ public:
     }
 
     return result;
-
         
     }
 };

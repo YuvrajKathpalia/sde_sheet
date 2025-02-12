@@ -53,6 +53,7 @@ int f(int index, vector<int>& coins , int amount){
 
         }
 
+
         return ans;
     
     }
@@ -60,8 +61,9 @@ int f(int index, vector<int>& coins , int amount){
 
 
 
+
 //approach2..memo..
-//use 2d dp... index,amount...mtlb kis index pe kitne amount ke liye kitne index use hore..
+//use 2d dp... index,amount...mtlb kis index pe kitne amount ke liye kitne coins use hore..
 
 // Memoization (top-down approach) is used to avoid redundant calculations by storing results in a dp table.
 

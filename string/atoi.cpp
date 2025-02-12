@@ -1,3 +1,5 @@
+//string ko integer me krna hai...
+
 //o(n)..
 //o(1)..
 //very famous..vimp quesn..

@@ -3,44 +3,32 @@
 //arr[i]>arr[i-1]) && (arr[i]>arr[i+1] ...loop lgake ye condition check krni bas...
 //aur first or last eleemnt ka bhi handle krlenaa...
 
+
 //o(n)..
 //o(1)..
 
 class Solution {
 public:
-    int findPeakElement(vector<int>& arr) {
+    int findPeakElement(vector<int>& nums) {
 
-        int n=arr.size();
-
-        if(n==1){
-            return 0;
-        }
+        int n=nums.size();
 
         for(int i=0;i<n;i++){
 
-            if(i==0){
-                if(arr[i]>arr[i+1])
-                return i;
-            }
-            else if(i==n-1){
-                if(arr[i]>arr[i-1])
-                return i;
-            }
+            if((i==0 || nums[i]>nums[i-1]) &&
+               (i==n-1 || nums[i]>nums[i+1])){
 
-            else{  //beech ka element..
-
-             if((arr[i]>arr[i-1]) && (arr[i]>arr[i+1])){
                 return i;
-             }
-
-            }
+               }
         }
 
-
         return -1;
-
+        
     }
 };
+
+
+
 
 //optimal...bs...o(logn)..o(1)..
 
