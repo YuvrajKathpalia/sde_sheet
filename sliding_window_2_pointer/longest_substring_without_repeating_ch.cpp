@@ -21,7 +21,6 @@ public:
         for (int i = 0; i < n; ++i) {
 
             unordered_set<char> seen; 
-            int length = 0;
 
             for (int j = i; j < n; ++j) {
                 if (seen.find(s[j]) != seen.end()) {
@@ -30,9 +29,7 @@ public:
 
                 seen.insert(s[j]);
 
-
-                length++;
-                maxLength = max(maxLength, length); 
+                maxLength = max(maxLength, j-i+1); 
             }
         }
 
@@ -91,12 +88,14 @@ public:
 
          }
 
+            hash[s[r]]=r;  //store krlo..character ka index..
+            
+
             length = r-l+1;  //length update...
 
             maxi=max(maxi,length);
 
-            hash[s[r]]=r;  //store krlo..character ka index..
-            
+          
             r++;
 
 

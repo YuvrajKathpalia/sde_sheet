@@ -38,6 +38,9 @@ class Solution {
 
 //optimal..prefix sum , unordered map..
 
+//The solution counts subarrays with a sum of 0 using a hashmap 
+//to track prefix sums. If a prefix sum repeats, it means a subarray with sum 0 exists between those indices.
+
 //o(n)..
 //o(n)..
 
@@ -71,6 +74,5 @@ class Solution {
         
         return count;
     }
-    
-    
+     
 };

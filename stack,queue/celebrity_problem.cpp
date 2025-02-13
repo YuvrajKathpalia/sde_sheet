@@ -1,5 +1,9 @@
 
 
+
+//3 approach///brute nested loop...better...use stack...optimal..use 2 pointer...
+
+
 https://geeksforgeeks.org/problems/the-celebrity-problem/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card
 
 //brute force...2 1d vector lelie.. iknow , knowme ..usme store krliaa

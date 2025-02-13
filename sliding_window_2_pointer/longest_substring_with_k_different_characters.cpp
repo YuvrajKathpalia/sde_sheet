@@ -88,11 +88,9 @@ public:
 
 //aur r++ krte rho..
 
-
 //longest substring without repeating characters ke 2 pointer wale me index store krre the ek array me har position ki
 //agar wo position phle se covered hai/repeating ch milgya aur wo usi window ke andar hai , l++ krte the(l=hash[s[r]]+1 krke)(jo last position thi us elemnt
 //ki usse ek age lejate the l ko..)..
-
 
 
 

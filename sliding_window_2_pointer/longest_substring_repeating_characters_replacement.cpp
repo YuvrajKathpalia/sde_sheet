@@ -31,12 +31,13 @@ public:
 
         int n=s.length();
 
-        int maxfreq=0;
+        
         int maxlength=0;
 
         for(int i=0;i<n;i++){
 
-            int hash[26]={0};
+            int hash[26]={0}; //ek array lelenge jisme freq store krte rhgee har charcter ki..
+            int maxfreq=0;
 
 
             for(int j=i;j<n;j++){
@@ -74,7 +75,8 @@ public:
 //2 pointer slidiwing window....same approach main condition whi hai length-maxfreq us point tak should be <=k to hi valid..
 
 
-//O(N+N)...NOT O(N^2)... The algorithm uses a sliding window approach, processing each character at most twice(JADA SE JADA)
+//O(N+N)...NOT O(N^2)... The algorithm uses a sliding window approach, processing each character
+// at most twice(JADA SE JADA)
 //EK BAR RIGHT.LEFT DONO POINTER SE USSE JADAA NI CHANCES), resulting in a linear time complexity of O(n), avoiding the O(n²) complexity of nested loops...ASA TO HAI NI EK R KE LIE HAR JAGAH L MOVE KRRA VICE VERSA...
 //(ISLIE WO ANDAR OUTOF BOUND WALA LOOP WHILE KI JAGAH IF BHI KRSKTE HAI)
 

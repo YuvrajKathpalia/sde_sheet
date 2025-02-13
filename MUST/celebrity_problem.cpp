@@ -73,15 +73,6 @@ class Solution {
 
 
 
-bool knows(vector<vector<int>>&matrix ,int i ,int j){
-    
-    
-    if(matrix[i][j]==1){
-        return true;
-    }
-    
-    return false;
-}
 
     int celebrity(vector<vector<int> >& matrix) {
         
@@ -101,7 +92,7 @@ bool knows(vector<vector<int>>&matrix ,int i ,int j){
             int b=st.top();
             st.pop();
             
-            if(knows(matrix,a,b)){
+            if(matrix[a][b]==1){
                 st.push(b);
             }
             else{
@@ -147,58 +138,50 @@ bool knows(vector<vector<int>>&matrix ,int i ,int j){
 //o(1)..
 
 class Solution {
-  public:
-
-
-
-bool knows(vector<vector<int>>&matrix ,int i ,int j){
+    public:
+  
+  
+  
+      int celebrity(vector<vector<int> >& matrix) {
+          
+           int n = matrix.size();
+          int i = 0, j = n - 1;
+  
+          // Narrow down to a potential celebrity
+          while (i < j) {
+              
+              if (matrix[i][j]==1) {
+                  i++;  // i cannot be a celebrity
+              } else {
+                  j--;  // j cannot be a celebrity
+              }
+          }
+  
+          
+          int x=i;  //possible celebrity....
+          
+          
+          
+          int zerocount=0;
+          int onecount=0;
+          
+          
+          for(int i=0;i<n;i++){
+              
+              if(matrix[x][i]==0){
+                  zerocount++;
+              }
+              if(matrix[i][x]==1){
+                  onecount++;
+              }
+          }
+          
+          if(zerocount==n && onecount==n-1){
+              return x;
+          }
+          
+          return -1;
     
-    
-    if(matrix[i][j]==1){
-        return true;
-    }
-    
-    return false;
-}
-
-    int celebrity(vector<vector<int> >& matrix) {
-        
-         int n = matrix.size();
-        int i = 0, j = n - 1;
-
-        // Narrow down to a potential celebrity
-        while (i < j) {
-            if (knows(matrix, i, j)) {
-                i++;  // i cannot be a celebrity
-            } else {
-                j--;  // j cannot be a celebrity
-            }
-        }
-
-        
-        int x=i;  //possible celebrity....
-        
-        
-        
-        int zerocount=0;
-        int onecount=0;
-        
-        
-        for(int i=0;i<n;i++){
-            
-            if(matrix[x][i]==0){
-                zerocount++;
-            }
-            if(matrix[i][x]==1){
-                onecount++;
-            }
-        }
-        
-        if(zerocount==n && onecount==n-1){
-            return x;
-        }
-        
-        return -1;
-        
-    }
-};
+          
+      }
+  };

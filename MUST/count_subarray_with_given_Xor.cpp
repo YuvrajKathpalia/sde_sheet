@@ -116,6 +116,14 @@ int main()
 
 
 
+//This approach efficiently finds subarrays with XOR **K** using **prefix XOR** and 
+//a **hashmap** in **O(N) time**. 
+//We maintain a running XOR (`currentXor`) and check how many times **(currentXor ^ K)** has appeared before,
+// as it indicates valid subarrays. The **hashmap stores prefix XOR frequencies**, allowing quick lookups and eliminating the need for nested loops. 🚀
+
+//kyuki currxor^(currxor^k)==k....hota na  isie...
+
+
 // n
 //n
 
@@ -164,4 +172,5 @@ int main() {
     cout << "Number of subarrays with XOR " << K << " is: " << result << endl;
 
     return 0;
+    
 }
