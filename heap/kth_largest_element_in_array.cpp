@@ -1,5 +1,5 @@
 
-//o(nlogk)..
+//o(nlogk)..agar normal tareeke se krte bina if condition lgaye..o(n) aati...
 
 // Inserting Elements into the Heap:
 
@@ -8,8 +8,12 @@
 
 // Removing Elements from the Heap:
 
-// When the heap size exceeds k, the smallest element is removed.
-// This operation also takes O(log k).
+// When the heap size exceeds k, the smallest element (top element)is removed....kyuki aur jo bhi
+// element ayege wo tab bhi kth largest to ni hopayge agar phle ni tha to...
+
+
+// This operation also takes O(log k)...tab bhi..o(n*(logk+logk))hi to rhega..same hi baat..
+
 // However, this is already accounted for in the insertion cost since we perform a pop only after an insertion when the heap size exceeds k.
 // Total Time Complexity:--o(nlogk)..
 

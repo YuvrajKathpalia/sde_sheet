@@ -7,7 +7,7 @@
 
 
 
-//tc...o(n)+o(k+n-k..logk= o(nlogk)) +o(klogk) ==o(nlogk)
+//tc...o(n)+o(k+n-k*(logk)= o(nlogk)) +o(klogk) ==o(nlogk)
 //sc..o(n)+o(k)+o(k)...
 
 
@@ -26,12 +26,13 @@ public:
 
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
-        for (auto& x : freqMap) {
 
-            pq.push({x.second, x.first});  //o(nlogk)..
+        for (auto& x : freqMap) {  //silly..nums pe loop mt lgadena..
+
+            pq.push({x.second, x.first});  //o(logk)..
 
             // If heap size exceeds k, remove the least frequent element
-            if (pq.size() > k) {  //o(nlogk)..
+            if (pq.size() > k) {  //o(logk)..
                 pq.pop();
             }
         }

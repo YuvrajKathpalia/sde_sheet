@@ -1,3 +1,6 @@
+//tc...o(nlogn)...recurrence eqn..t(n)==2t(n/2)+o(N).....har case me nlogn hi aati merge sort ki..
+
+
 
 //FOR VECTOR...(PUSH BACK)..
 
@@ -5,7 +8,9 @@
 using namespace std;
 
 void merge(vector<int> &arr, int low, int mid, int high) {
+
     vector<int> temp; // temporary array
+    
     int left = low;      // starting index of left half of arr
     int right = mid + 1;   // starting index of right half of arr
 
@@ -35,7 +40,7 @@ void merge(vector<int> &arr, int low, int mid, int high) {
         right++;
     }
 
-    // transfering all elements from temporary to arr //...SILLLY..
+    // transfering all elements from temporary to arr //...SILLLY....COPY KRRE..VOID RETURN TYPE NA..AS A REFRENCE PASS HORKHA ARRAY..
     for (int i = low; i <= high; i++) {
         arr[i] = temp[i - low];
     }

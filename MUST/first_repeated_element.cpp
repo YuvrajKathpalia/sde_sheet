@@ -26,6 +26,7 @@ class Solution {
 //agar mapped..to ans update kro..min ans chiye..ans=min(ans,mp[arr[i]])..
 
 
+
 class Solution {
   public:
 

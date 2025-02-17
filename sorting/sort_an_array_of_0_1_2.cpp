@@ -73,6 +73,7 @@ public:
 
 
 
+
 // ### Dutch National Flag Problem - Summary(3 pointers maintain krenge low aur high se 0 aur 2 ki boundary maintain
 //krenge...aur mid see travserse krenge elements shuru se leke end tak...)
 
@@ -104,7 +105,9 @@ public:
 //LOW AUR HIGH KO SHURU AUR LAST ME RKHDIA RESPECTIEVLY...AUR MID POINTER SE ARRAY TRAVERSE KRRE..
 //AGAR 0 ARA TO LOW SE SWAP KRDENGE AUR MID++ LOW++..AGAR 1 HI ARA TO MID++ BAS... AGAR 2 ARA TO HIGH SE SWAP AUR HIGH--
 
-//YE WAKI APPROACH UPAR WALI SE BETTER KYUKI ISME KUM OPERATIONS HONGE AUR INPLACE SORTING KEHSKTE NA..
+//YE WAKI APPROACH UPAR WALI SE BETTER KYUKI ISME KUM OPERATIONS HONGE AUR INPLACE SORTING KEHSKTE NA..ekpass me
+//sabkuch yee line jada sahi suit kar rhi..
+
 //HAI JABKI COMPLEXITY DONO KI ...O(N)..O(1)..
 
 
@@ -146,7 +149,6 @@ public:
               //taki high+1 se last tak 2 milje..
             }
 
-        }
-        
+        }   
     }
 };
