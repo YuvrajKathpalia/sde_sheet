@@ -1,18 +1,13 @@
 
 https://leetcode.com/problems/happy-number/description/
 
-//easy..famous...approach1..
-//o(logn)
-//o(logn)..
-
-
 
 
 //easy..famous...
 //o(logn)
 //o(logn)..
 
-//tc..o(k*logn)... but y k finit hoga obviously.. to ..o(logn) hi bnegi bas..
+//tc..o(k*logn)... but ye k finit hoga obviously.. to ..o(logn) hi bnegi bas..
 //sc...o(1).. set ki ni hogi constant space hi lega...maximum kitne hi number store krlega ek time pe repeat honge...
 
 
@@ -58,9 +53,10 @@ int main(){
    cout<<ans;
    
    //return ans;
+
+   return 0;
     
-    
-    
+
     
 }
 
@@ -72,7 +68,7 @@ int main(){
 //o(logn)..
 //o(1)..
 
-//iski to kuch space compelxity ni bilkul bhi na..
+//iski to kuch space compelxity ni bilkul bhi na....space complexity better hogyi..
 
 
 class Solution {

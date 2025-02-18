@@ -27,35 +27,6 @@ class Solution {
 
 
 
-//better , use set...o(n)..o(n)..
-
-//1 se leke array ke size+1 tak numbers daldo ek set me..
-//fir array me loop lgao jo jo number ata jara hatade jao set se...ek last bachjega,,
-//wo return krna..
-
-
-class Solution {
-  public:
-    int missingNumber(vector<int>& arr) {
-        
-       int n = arr.size() + 1;  // Since one number is missing
-        unordered_set<int> s;
-
-        // Insert all numbers from 1 to n
-        for (int i = 1; i <= n; i++) {
-            s.insert(i);
-        }
-
-        // Remove numbers present in the array
-        for (int num : arr) {
-            s.erase(num);
-        }
-
-        // The only remaining number in the set is the missing number...
-        return *s.begin();
-        
-    }
-};
 
 
 
@@ -78,6 +49,7 @@ public:
         
         return expectedSum - actualSum;  // The missing number
     }
+
 };
 
 
@@ -91,6 +63,7 @@ public:
 //a^a=0 we know that
 
 //jo xor bchjega, whi missing number hoga..
+
 
 
 

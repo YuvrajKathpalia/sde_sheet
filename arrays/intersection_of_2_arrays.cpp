@@ -20,6 +20,7 @@ public:
 };
 
 
+
 //approach2..use unordered map..count store krlo ek array ka..
 ///doosre array me loop lgake check kro agar mapped to ans vector
 //me store , aur map se erase krdo taki bad me na aye

@@ -7,6 +7,21 @@
 // until the array is fully sorted.
 //  Its average time complexity is O(n log n), but worst-case is O(n²).
 
+//
+
+//Best Case: The array is split into nearly equal halves at each step, 
+//leading to a recursion depth of O(log n) and time complexity O(n log n).
+
+
+//Worst Case: The array is split very unevenly (pivot always at one extreme), 
+//leading to a recursion depth of O(n) and time complexity O(n²).
+
+
+
+//Best Case Space Complexity: O(log n) (because recursion depth is balanced).
+//Worst Case Space Complexity: O(n) (due to deep recursion when the pivot choice is poor and the array is unbalanced).
+
+
 
 
 #include<bits/stdc++.h>
@@ -15,7 +30,7 @@ using namespace std;
 
 int partition(vector<int>&nums , int low , int high){
 
-    int pivot=nums[high];
+    int pivot=nums[high]; //last wala element let krlio pivot..isko sahi jagah lana..
 
     int i=low;
 

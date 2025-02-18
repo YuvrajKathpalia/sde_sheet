@@ -5,7 +5,8 @@
 //LENGTH OF LCS..
 //approach1..
 //RECURRSION...
-//o(2^m* 2^n)...o(n)..
+//tc..o(2^m* 2^n)...
+//sc..o(m+n)..
 
 
 //(BRUTE FORCE SOLUTION BHI HAI SBSE NEECHE...).
@@ -38,7 +39,8 @@ int f(int index1, int index2, string s1, string s2 ){
 
 //approach2..
 //MEMOIZATION...
-//o(M*N))...o(M+N)+O(M*N)..
+//tc..o(M*N))...
+//sc..o(M+N)+O(M*N)..
 
 class Solution {
 public:
@@ -152,6 +154,7 @@ public:
                          //answer LCS TO last wale element PE BAITHJATA THA NA...mtlb...dp[n][m]
     }
 };
+
 
 //approach4..
 //SPACE OPTIMIZATION...

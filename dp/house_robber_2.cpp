@@ -1,6 +1,6 @@
 //approach1..recursion
 //similar to house robber1..
-//isme bs last wala aur first walasame..to ya to 1st pick kro ya last..
+//isme bs last wala aur first wala same..to ya to 1st pick kro ya last..
 
 //to hum 2 call dendenge..ek bar last remove krke aur ekbar first remove krke jisse max ayga wo 
 // return krdenge
@@ -14,10 +14,10 @@ int solve(int index,vector<int>&nums){
 
         if(index<0) return 0 ; 
 
-        int pick = nums[index] ; 
+        int pick = 0 ; 
     
          if(index>1)
-          pick+=solve(index-2,nums);
+          pick+= nums[index]+ solve(index-2,nums);
 
         int notpick = 0+solve(index-1,nums);  
 

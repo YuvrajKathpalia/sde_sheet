@@ -26,6 +26,7 @@ public:
 //agar current price , min price se bhi chota tab profit to honi skta, minprice update krdo
 //else profit update kroo...
 
+
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {

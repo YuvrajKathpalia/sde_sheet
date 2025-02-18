@@ -1,13 +1,15 @@
 
 
+
 https://www.geeksforgeeks.org/problems/array-subset-of-another-array2317/1?page=1&sortBy=submissions
 
 
 ///easy...optimal..
 //use unordered map...
-//phle a1 array ke ele,nts map krlo..
+//phle a1 array ke elements map krlo..
 //fir a2 me loop lgao aur check kro , wo elemnt mapped hai na(aur mapped h to count >0))
 //hai na...tabhi uska count-- kro...warna ye valid ni to invalid situation return no...
+
 
 
 string isSubset(int a1[], int a2[], int n, int m) {

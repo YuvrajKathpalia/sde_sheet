@@ -1,5 +1,7 @@
 https://leetcode.com/problems/longest-palindromic-substring/description/
+
 //brute...n cube..
+
 
 class Solution {
 public:
@@ -23,12 +25,11 @@ string longestPalindrome(string& s) {
     for (int i = 0; i < n; i++) {
         for (int j = i; j < n; j++) {
 
-            int length=j-i+1;
-
-            if (checkPal(s, i, j) && length > maxLen) {
+        
+            if (checkPal(s, i, j)) {
 
                 start = i;
-                maxLen = j - i + 1;
+                maxLen = max(maxLen,j-i+1);
             }
         }
     }

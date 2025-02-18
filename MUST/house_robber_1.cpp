@@ -15,7 +15,7 @@ int f(vector<int>&nums , int index){
         return 0;
     }
     
-    int pick=0;
+    int pick=0; //silly..int_max ni..
     
     if(index>1){
          pick += nums[index]+f(nums,index-2);
