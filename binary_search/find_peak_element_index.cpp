@@ -7,6 +7,8 @@
 //o(n)..
 //o(1)..
 
+
+
 class Solution {
 public:
     int findPeakElement(vector<int>& nums) {
@@ -26,7 +28,6 @@ public:
         
     }
 };
-
 
 
 

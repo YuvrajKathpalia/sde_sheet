@@ -31,7 +31,7 @@ public:
             }
 
 
-            if(nums[s]<=nums[mid]){ 
+            else if(nums[s]<=nums[mid]){ 
 
                 if(nums[s]<=target && target<=nums[mid]){   
                     e=mid-1;

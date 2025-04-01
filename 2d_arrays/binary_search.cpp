@@ -13,7 +13,8 @@ bool searchMatrix(vector<vector<int>>& matrix, int target) {
 
         if (matrix[mid / n][mid % n] == target) {
             return true;
-        } else if (matrix[mid / n][mid % n] < target) {
+        } 
+        else if (matrix[mid / n][mid % n] < target) {
             s = mid + 1;
         } else {
             e = mid - 1;
@@ -32,6 +33,8 @@ int main() {
 
     vector<vector<int>> matrix(m, vector<int>(n));
 
+    
+    
     
 
     cout << "Enter matrix elements row by row:\n";

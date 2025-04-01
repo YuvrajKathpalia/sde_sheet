@@ -2,6 +2,7 @@
 //BRUTE..LINEAR SEARCH...O(N)..
 
 
+
 class Solution {
     public:
         int findMin(vector<int>& nums) {
