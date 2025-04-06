@@ -33,22 +33,29 @@ public:
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> twoSum(vector<int>& nums, int target) {
-    int n = nums.size();
-    unordered_map<int, int> mpp;
-
-    for (int i = 0; i < n; i++) {
-        int sum = nums[i];
-        int left = target - sum;
-
-        if (mpp.find(left) != mpp.end()) {
-            return {i, mpp[left]};
+        vector<int> twoSum(vector<int>& nums, int target) {
+    
+    
+            int n=nums.size();
+    
+            unordered_map<int,int>mp;
+    
+            for(int i=0;i<n;i++){
+    
+                int left = target - nums[i];
+    
+                if(mp.find(left)!=mp.end()){
+    
+                    return {i , mp[left]};
+                }
+    
+                mp[nums[i]]=i;
+            }
+    
+            return {-1,-1};
+            
         }
-        mpp[sum] = i;
-    }
 
-    return {-1, -1};
-}
 
 int main() {
     int n;
@@ -65,10 +72,16 @@ int main() {
     vector<int> ans = twoSum(nums, target);
 
     // Print the result
-    if (ans[0] == -1 && ans[1] == -1) {
-        cout << "No solution found" << endl;
-    } else {
-        cout << ans[0] << " " << ans[1] << endl;
+    // if (ans[0] == -1 && ans[1] == -1) {
+    //     cout << "No solution found" << endl;
+    // } else {
+    //     cout << ans[0] << " " << ans[1] << endl;
+    // }
+
+    //OR..
+    
+    for(int i=0;i<2;i++){
+        cout<<ans[i];
     }
 
     return 0;

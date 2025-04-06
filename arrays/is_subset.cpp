@@ -4,7 +4,8 @@
 https://www.geeksforgeeks.org/problems/array-subset-of-another-array2317/1?page=1&sortBy=submissions
 
 
-///easy...optimal..
+///easy...optimal.....is a2 an subset of a1 array...
+
 //use unordered map...
 //phle a1 array ke elements map krlo..
 //fir a2 me loop lgao aur check kro , wo elemnt mapped hai na(aur mapped h to count >0))

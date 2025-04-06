@@ -38,6 +38,7 @@ class Solution {
 
 
 
+
 //optimal
 
 //peeche se chlte hai...last elemnt to leader hoga hi hmesha..usse push back krlia phle hi
